@@ -1,6 +1,8 @@
 {
   "name": "invoice-desk",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "离线 Windows 发票与报销项目管理工具",
+  "author": "MiaoXi0916",
   "private": true,
   "type": "module",
   "main": "应用源码/electron/main.cjs",
@@ -14,10 +16,25 @@
   "build": {
     "appId": "com.invoice.desk",
     "productName": "票据管家",
-    "directories": { "output": "发布产物/release" },
-    "files": ["发布产物/dist/**/*", "应用源码/electron/**/*", "package.json"],
+    "directories": {
+      "output": "发布产物/release"
+    },
+    "files": [
+      "发布产物/dist/**/*",
+      "应用源码/electron/**/*",
+      "package.json"
+    ],
     "asar": true,
-    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
     "nsis": {
       "oneClick": false,
       "perMachine": false,

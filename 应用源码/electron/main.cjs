@@ -6,7 +6,7 @@ const XLSX = require('xlsx-js-style');
 const { clean, money, invoiceFileName } = require('./invoice-rules.cjs');
 
 let db;
-const defaultFolder = path.join(process.cwd(), '我的发票');
+function defaultFolder() { return app.isPackaged ? path.join(app.getPath('documents'), '票据管家', '我的发票') : path.join(process.cwd(), '我的发票'); }
 const now = () => new Date().toISOString();
 function styleWorkbookSheet(sheet, theme = 'project') {
   const range = XLSX.utils.decode_range(sheet['!ref'] || 'A1:A1');
@@ -53,7 +53,7 @@ function initDb() {
   `);
   for (const name of ['未报销', '报销中', '已报销', '不能报销']) db.prepare('INSERT OR IGNORE INTO statuses(name, preset) VALUES (?, 1)').run(name);
   for (const name of ['材料费', '设备费', '办公用品', '差旅费', '服务费', '其他']) db.prepare('INSERT OR IGNORE INTO categories(name) VALUES (?)').run(name);
-  db.prepare('INSERT OR IGNORE INTO settings(key, value) VALUES (?, ?)').run('invoice_directory', defaultFolder);
+  db.prepare('INSERT OR IGNORE INTO settings(key, value) VALUES (?, ?)').run('invoice_directory', defaultFolder());
   db.prepare('INSERT OR IGNORE INTO settings(key, value) VALUES (?, ?)').run('theme', 'light');
   try { db.exec("ALTER TABLE project_invoices ADD COLUMN file_path TEXT DEFAULT ''"); } catch { /* Column already exists. */ }
   try { db.exec("ALTER TABLE projects ADD COLUMN archived INTEGER NOT NULL DEFAULT 0"); } catch { /* Column already exists. */ }
@@ -66,7 +66,7 @@ function getDirectory() { return one("SELECT value FROM settings WHERE key='invo
 function setDirectory(folder) { db.prepare("UPDATE settings SET value=? WHERE key='invoice_directory'").run(folder); }
 function ensureInvoiceLayout() {
   let root = getDirectory();
-  const migratedRoot = path.join(process.cwd(), '我的发票');
+  const migratedRoot = defaultFolder();
   if ((!fs.existsSync(root) || path.basename(root) === '我的所有发票') && fs.existsSync(migratedRoot)) { root = migratedRoot; setDirectory(root); }
   fs.mkdirSync(root, { recursive: true });
   const master = path.join(root, '所有发票');
