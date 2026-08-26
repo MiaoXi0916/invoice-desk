@@ -1,0 +1,8 @@
+html, body, #root { height: 100%; }
+.app-shell { min-height: 100vh; height: 100vh; overflow: hidden; }
+.sidebar { position: fixed; inset: 0 auto 0 0; height: 100vh; z-index: 2; }
+.content { margin-left: 240px; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+.content.project-content { overflow: hidden; }
+@media (max-width: 900px) {
+  .content { margin-left: 58px; }
+}

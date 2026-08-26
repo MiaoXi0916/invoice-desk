@@ -1,0 +1,46 @@
+{
+  "name": "invoice-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "应用源码/electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"vite --config 应用源码/vite.config.js\" \"wait-on http://127.0.0.1:5173 && electron . --dev\"",
+    "build": "vite build --config 应用源码/vite.config.js",
+    "dist": "npm run build && electron-builder --win nsis",
+    "start": "electron .",
+    "test": "node --test 应用源码/tests/*.test.cjs"
+  },
+  "build": {
+    "appId": "com.invoice.desk",
+    "productName": "票据管家",
+    "directories": { "output": "发布产物/release" },
+    "files": ["发布产物/dist/**/*", "应用源码/electron/**/*", "package.json"],
+    "asar": true,
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "票据管家"
+    }
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "lucide-react": "latest",
+    "pdfjs-dist": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "wait-on": "latest",
+    "xlsx": "latest",
+    "xlsx-js-style": "^1.2.0"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^26.15.3"
+  }
+}

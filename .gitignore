@@ -1,0 +1,7 @@
+node_modules/
+发布产物/
+我的发票/
+*.sqlite
+*.sqlite-journal
+*.log
+.env
