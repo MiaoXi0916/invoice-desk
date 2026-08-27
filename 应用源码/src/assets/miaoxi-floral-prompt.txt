@@ -1,0 +1,7 @@
+Asset type: decorative background artwork for a desktop invoice management app, used only as a low-opacity theme texture.
+Primary request: a richer but elegant rose-garden composition inspired by the supplied anime girl's rose hair ornaments, with layered rose blossoms, petals, ribbons, tiny sparkles and sage leaves.
+Composition: asymmetrical botanical clusters in all four corners, with a few petals and ribbon curls drifting toward the edges; keep the center and table reading area mostly empty.
+Style: polished Japanese watercolor and fine ink illustration, refined and cohesive, not a flat sparse pattern.
+Palette: warm ivory, blush pink, peach coral, dusty rose, wine red accents, muted sage green.
+Constraints: no people, no faces, no text, no logos, no watermark, no border; artwork must remain suitable as a subtle UI background and have quiet negative space in the center.
+Avoid: empty plain background, a single isolated flower, neon colors, black heavy outlines, busy center, photorealism.

@@ -23,6 +23,22 @@
 .picker-row small { color: #718078; margin-top: 4px; font-size: 12px; }
 .retry-button { display: inline-flex; align-items: center; margin-left: 6px; padding: 6px 8px; border-radius: 4px; background: #fff1d6; color: #92670e; font-size: 12px; }
 .retry-button:hover { background: #ffe5ad; }
+.open-pdf-button,.table-edit { display: inline-flex; align-items: center; justify-content: center; gap: 4px; margin-left: 6px; padding: 6px 8px; border-radius: 4px; background: #edf4ef; color: #216451; font-size: 12px; }
+.open-pdf-button:hover,.table-edit:hover { background: #dcebe1; }
+.creator-card { display: flex; align-items: flex-end; gap: 9px; padding: 10px 8px 13px; margin: 0 -2px 10px; border: 1px solid #356055; border-radius: 8px; background: #1d4439; position: relative; overflow: visible; }
+.creator-card::after { content: ''; position: absolute; width: 74px; height: 74px; right: -18px; top: -28px; border: 1px solid #e7a6a055; border-radius: 50%; box-shadow: 0 0 0 8px #e7a6a01a, 0 0 0 16px #e7a6a00e; }
+.creator-avatar { width: 66px; height: 88px; flex: 0 0 66px; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 1; }
+.creator-card img { width: 66px; height: 112px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 5px 8px #071b1450); flex: 0 0 auto; }
+.creator-copy { min-width: 0; padding-bottom: 2px; }
+.creator-copy strong, .creator-copy span, .creator-copy small { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: relative; z-index: 1; }
+.creator-copy .creator-kicker { color: #e7a6a0; font-size: 8px; letter-spacing: 1.2px; margin-bottom: 6px; }
+.creator-copy strong { color: #f0f7f2; font-size: 11px; letter-spacing: .2px; }
+.creator-copy span { color: #c0d4c8; font-size: 11px; margin-top: 4px; }
+.creator-copy small { color: #8fac9f; font-size: 10px; margin-top: 6px; }
+.local-storage small { display: block; line-height: 1.5; margin-top: 5px; overflow-wrap: anywhere; }
+.theme-dark .creator-card { border-color: #365045; }
+.theme-dark .creator-copy strong { color: #e5eee8; }
+.theme-dark .creator-copy span { color: #c3d5ca; }
 .stats-panel { background: #fff; border: 1px solid #dfe6e0; border-radius: 7px; padding: 18px; margin-bottom: 18px; }
 .stats-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .stats-heading h2 { margin: 3px 0 0; font-size: 18px; }

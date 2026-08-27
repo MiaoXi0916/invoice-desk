@@ -1,0 +1,7 @@
+Asset type: 16:9 desktop application background decoration for an invoice management workspace.
+Primary request: Create an elegant wide-screen botanical frame inspired by soft rose accessories: a watercolor rose-and-ribbon border that fills all four screen edges while leaving the entire central 60 percent very quiet for data tables.
+Composition: 2048 by 1152 landscape; distinct rose clusters and curved peach ribbons in the top right and bottom left, with smaller sparse petals at top left and bottom right. The frame must visibly reach the page edges at this wide aspect ratio.
+Style: delicate polished Japanese watercolor with fine ink details, sophisticated software theme artwork.
+Color palette: warm ivory, blush pink, peach coral, dusty rose, restrained wine red, muted sage leaves.
+Constraints: no people, no text, no UI mockup, no logos, no watermark, no border rectangle; preserve a generous uncluttered central reading area.
+Avoid: square framing, large blank margins around decoration, excessive symmetry, dark background, busy center.

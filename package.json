@@ -1,6 +1,6 @@
 {
   "name": "invoice-desk",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "离线 Windows 发票与报销项目管理工具",
   "author": "MiaoXi0916",
   "private": true,
@@ -45,19 +45,19 @@
     }
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "concurrently": "latest",
     "lucide-react": "latest",
     "pdfjs-dist": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "vite": "latest",
-    "wait-on": "latest",
     "xlsx": "latest",
     "xlsx-js-style": "^1.2.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
     "electron": "latest",
-    "electron-builder": "^26.15.3"
+    "electron-builder": "^26.15.3",
+    "vite": "latest",
+    "wait-on": "latest"
   }
 }
